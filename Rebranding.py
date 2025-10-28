@@ -867,7 +867,7 @@ def pptx_update_shape_recursive(shape, slide_idx: int, path: str, color_map: Dic
     except Exception:
         pass
 
-def pptx_compose_slide_preview(prs: Presentation, slide, width_px: int = 900) -> Optional[bytes]:
+def pptx_compose_slide_preview(prs: "Presentation", slide, width_px: int = 900) -> Optional[bytes]:
     if not PIL_AVAILABLE:
         return None
     try:
